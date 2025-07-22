@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Поиск погоды</h1>
+    <form method="POST">
+      <input type="text" name="city" placeholder="Введите город" required>
+      <button type="submit">Найти</button>
+    </form>
+    {% if weather %}
+      <h2>Погода в {{ weather.city }}</h2>
+      <p>Температура: {{ weather.temp }}°C</p>
+      <p>Описание: {{ weather.desc }}</p>
+    {% endif %}
+    <a href="/history">История запросов</a>
+  </body>
+</html>

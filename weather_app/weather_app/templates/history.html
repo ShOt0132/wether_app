@@ -1,0 +1,10 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>История запросов</h1>
+    {% for q in queries %}
+      <p><strong>{{ q.city_name }}</strong> — {{ q.temperature }}°C, {{ q.description }} ({{ q.timestamp }})</p>
+    {% endfor %}
+    <a href="/">Назад</a>
+  </body>
+</html>
